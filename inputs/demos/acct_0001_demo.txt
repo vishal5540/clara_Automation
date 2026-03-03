@@ -1,0 +1,13 @@
+Welcome to ACME Plumbing and HVAC.
+
+We are open Monday to Friday 9am-5pm CST.
+
+We handle plumbing, HVAC, and emergency repair services.
+
+Emergencies include gas leaks, burst pipes, flooding, fire, or carbon monoxide alarms.
+
+During business hours, calls should be routed to the office at 555-987-6543.
+
+After hours, emergency calls should be transferred to the on-call technician at 555-123-4567.
+
+Non-emergency calls after hours should be recorded and returned the next business day.

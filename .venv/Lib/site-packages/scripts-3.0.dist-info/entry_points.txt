@@ -1,0 +1,8 @@
+[console_scripts]
+cdblank = scripts.cdblank:main
+cdriso = scripts.cdriso:main
+cdwrite = scripts.cdwrite:main
+my-backup = scripts.my_backup:main
+pg-backup = scripts.pg_backup:main
+pkg = scripts.pkg:main
+unpkg = scripts.unpkg:main

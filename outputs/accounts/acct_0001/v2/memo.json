@@ -1,0 +1,66 @@
+{
+  "account_id": "acct_0001",
+  "company_name": "an onboarding update for ACME Plumbing and HVAC",
+  "business_hours": {
+    "days": [
+      "Mon",
+      "Tue",
+      "Wed",
+      "Thu",
+      "Fri"
+    ],
+    "start": "8am",
+    "end": "6pm",
+    "timezone": "CST"
+  },
+  "office_address": "",
+  "services_supported": [
+    "hvac",
+    "plumbing",
+    "electrical"
+  ],
+  "emergency_definition": [
+    "carbon monoxide",
+    "fire / smoke",
+    "flooding / burst pipe",
+    "gas leak / gas smell"
+  ],
+  "emergency_routing_rules": {
+    "contacts": [
+      "5559876543",
+      "5551234567",
+      "5552223333"
+    ],
+    "order": [
+      "5559876543",
+      "5551234567",
+      "5552223333"
+    ],
+    "fallback": ""
+  },
+  "non_emergency_routing_rules": {
+    "contacts": [
+      "5559876543",
+      "5551234567",
+      "5552223333"
+    ],
+    "order": [
+      "5559876543",
+      "5551234567",
+      "5552223333"
+    ],
+    "fallback": ""
+  },
+  "call_transfer_rules": {
+    "timeout_seconds": 25,
+    "retries": 1,
+    "fail_message": ""
+  },
+  "integration_constraints": [],
+  "after_hours_flow_summary": "",
+  "office_hours_flow_summary": "",
+  "questions_or_unknowns": [
+    "Need business_hours (days/start/end)"
+  ],
+  "notes": "Extracted via deterministic rules; blanks mean not present in transcript."
+}

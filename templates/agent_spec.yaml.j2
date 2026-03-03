@@ -1,0 +1,25 @@
+agent_name: "{{ (company_name or "Account") ~ " - Dispatcher (" ~ account_id ~ ")" }}"
+voice_style: "calm, confident, concise"
+system_prompt: |-
+{{ system_prompt | indent(2, true) }}
+key_variables:
+  timezone: "{{ business_hours.timezone or "UNKNOWN" }}"
+  business_hours: "{{ (business_hours.days|join(", ")) if business_hours.days else "UNKNOWN" }} {{ business_hours.start or "" }}-{{ business_hours.end or "" }}"
+  office_address: "{{ office_address or "UNKNOWN" }}"
+  emergency_definition:
+{% if emergency_definition %}
+{% for e in emergency_definition %}
+    - "{{ e }}"
+{% endfor %}
+{% else %}
+    - "UNKNOWN"
+{% endif %}
+tool_placeholders:
+  - name: "create_ticket"
+    description: "Placeholder: create a dispatch ticket"
+call_transfer_protocol:
+  timeout_seconds: {{ call_transfer_rules.timeout_seconds }}
+  retries: {{ call_transfer_rules.retries }}
+  if_transfer_fails: "{{ call_transfer_rules.fail_message or "Transfer failed; take details and assure callback." }}"
+fallback_protocol: "If routing is unclear, take a message, confirm callback, and promise follow-up."
+version: "{{ version }}"
