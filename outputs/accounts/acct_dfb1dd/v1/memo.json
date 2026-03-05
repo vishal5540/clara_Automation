@@ -1,0 +1,64 @@
+{
+  "account_id": "acct_dfb1dd",
+  "company_name": "",
+  "business_hours": {
+    "days": [],
+    "start": "",
+    "end": "",
+    "timezone": ""
+  },
+  "office_address": "",
+  "services_supported": [],
+  "emergency_definition": [],
+  "emergency_routing_rules": {
+    "contacts": [],
+    "order": [],
+    "fallback": ""
+  },
+  "non_emergency_routing_rules": {
+    "contacts": [],
+    "order": [],
+    "fallback": ""
+  },
+  "call_transfer_rules": {
+    "timeout_seconds": 25,
+    "retries": 1,
+    "fail_message": ""
+  },
+  "integration_constraints": [],
+  "after_hours_flow_summary": "",
+  "office_hours_flow_summary": "",
+  "questions_or_unknowns": [
+    "Need company_name",
+    "Need business_hours (days/start/end)",
+    "Need timezone",
+    "Need emergency_definition",
+    "Need services_supported",
+    "Need routing phone numbers and routing rules (who to call for emergencies / non-emergencies)"
+  ],
+  "notes": "Strict extraction. Missing fields are explicitly flagged.",
+  "_meta": {
+    "stage": "demo",
+    "confidence": {
+      "company_name": "missing",
+      "timezone": "missing",
+      "business_hours": "missing",
+      "services_supported": "missing",
+      "emergency_definition": "missing",
+      "routing_rules": "missing",
+      "integration_constraints": "missing"
+    },
+    "evidence": {
+      "company_name": "",
+      "timezone": "",
+      "business_hours": "",
+      "services_supported": {},
+      "emergency_definition": {},
+      "phones": {
+        "3870849411": "16\t From BP : G&M Pressure washing 11:21:24\t From BP : Shelley Manley 11:21:41\t From BP : 403-870-8494 11:22:38\t From BP : gm_pressurewash@yahoo.ca"
+      },
+      "integration_constraints": {},
+      "routing_cue": ""
+    }
+  }
+}
