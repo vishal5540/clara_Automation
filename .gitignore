@@ -1,4 +1,5 @@
 .venv
+.n8n/
 __pycache__
 *.pyc
 .env
