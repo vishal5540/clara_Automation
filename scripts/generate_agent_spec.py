@@ -1,6 +1,5 @@
 from jinja2 import Environment, FileSystemLoader
 import yaml
-import os
 
 def render_agent_spec(memo: dict, version: str, templates_dir: str):
     env = Environment(
@@ -20,6 +19,5 @@ def render_agent_spec(memo: dict, version: str, templates_dir: str):
         version=version
     )
 
-    # Validate YAML
-    yaml.safe_load(rendered)
+    yaml.safe_load(rendered)  # validate
     return rendered

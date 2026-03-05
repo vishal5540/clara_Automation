@@ -3,26 +3,18 @@ import subprocess
 
 app = FastAPI()
 
-@app.post("/run-demo")
-def run_demo():
-    result = subprocess.run(
-        ["python", "-m", "scripts.run_demo_batch"],
-        capture_output=True,
-        text=True
-    )
+def _run(cmd):
+    result = subprocess.run(cmd, capture_output=True, text=True)
     return {
         "stdout": result.stdout,
-        "stderr": result.stderr
+        "stderr": result.stderr,
+        "returncode": result.returncode,
     }
+
+@app.post("/run-demo")
+def run_demo():
+    return _run(["python", "-m", "scripts.run_demo_batch"])
 
 @app.post("/run-onboarding")
 def run_onboarding():
-    result = subprocess.run(
-        ["python", "-m", "scripts.run_onboarding_batch"],
-        capture_output=True,
-        text=True
-    )
-    return {
-        "stdout": result.stdout,
-        "stderr": result.stderr
-    }
+    return _run(["python", "-m", "scripts.run_onboarding_batch"])

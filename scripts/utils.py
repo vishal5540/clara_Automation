@@ -24,6 +24,18 @@ def norm_phone(s: str) -> str:
 
 def deterministic_account_id(filename: str) -> str:
     m = re.search(r"(acct_\d+)", filename, re.I)
-    if m: return m.group(1).lower()
+    if m:
+        return m.group(1).lower()
     h = hashlib.sha1(filename.encode("utf-8")).hexdigest()[:6]
     return f"acct_{h}"
+
+def sha1_text(text: str) -> str:
+    return hashlib.sha1(text.encode("utf-8")).hexdigest()
+
+def safe_get(d, path, default=None):
+    cur = d
+    for p in path:
+        if not isinstance(cur, dict) or p not in cur:
+            return default
+        cur = cur[p]
+    return cur

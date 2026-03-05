@@ -1,18 +1,18 @@
-agent_name: "{{ (company_name or "Account") ~ " - Dispatcher (" ~ account_id ~ ")" }}"
+agent_name: "{{ (company_name or "Account") ~ " - Clara (" ~ account_id ~ ")" }}"
 voice_style: "calm, confident, concise"
 system_prompt: |-
 {{ system_prompt | indent(2, true) }}
 key_variables:
-  timezone: "{{ business_hours.timezone or "UNKNOWN" }}"
-  business_hours: "{{ (business_hours.days|join(", ")) if business_hours.days else "UNKNOWN" }} {{ business_hours.start or "" }}-{{ business_hours.end or "" }}"
-  office_address: "{{ office_address or "UNKNOWN" }}"
+  timezone: "{{ business_hours.timezone or "" }}"
+  business_hours: "{{ (business_hours.days|join(", ")) if business_hours.days else "" }} {{ business_hours.start or "" }}-{{ business_hours.end or "" }}"
+  office_address: "{{ office_address or "" }}"
   emergency_definition:
 {% if emergency_definition %}
 {% for e in emergency_definition %}
     - "{{ e }}"
 {% endfor %}
 {% else %}
-    - "UNKNOWN"
+    - ""
 {% endif %}
 tool_placeholders:
   - name: "create_ticket"

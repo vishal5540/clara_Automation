@@ -1,0 +1,14 @@
+Onboarding for ACME Fire Protection:
+
+Business hours are Monday to Friday 8am-6pm CST.
+After hours: ask if emergency.
+
+Emergency definition: sprinkler leak, fire alarm triggered, fire/smoke.
+Emergency routing: transfer to 555-222-3333 first, backup 555-123-4567.
+Non-emergency after-hours: take message, follow up during business hours.
+
+Transfer timeout should be 60 seconds and retries 2.
+If transfer fails after retries, dispatch must be notified and caller assured callback.
+
+Never create sprinkler jobs in ServiceTrade.
+Office address: 10 Main Street, Dallas, TX.

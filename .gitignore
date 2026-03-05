@@ -1,0 +1,7 @@
+.venv
+__pycache__
+*.pyc
+.env
+outputs/accounts/*/v1/*
+outputs/accounts/*/v2/*
+outputs/accounts/*/changelog/*
